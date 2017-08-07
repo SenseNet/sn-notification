@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>Application</ContentType>
+  <ContentName>Notification</ContentName>
+  <Fields>
+    <DisplayName><![CDATA[$Action,NotifyMe]]></DisplayName>
+    <ActionTypeName><![CDATA[SetNotificationAction]]></ActionTypeName>
+    <Clear>true</Clear>
+    <Icon><![CDATA[application]]></Icon>
+  </Fields>
+  <Permissions>
+    <Clear />
+  </Permissions>
+</ContentMetaData>

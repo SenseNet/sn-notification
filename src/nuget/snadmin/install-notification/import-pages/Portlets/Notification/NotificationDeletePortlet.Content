@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>Portlet</ContentType>
+  <ContentName>NotificationDeletePortlet</ContentName>
+  <Fields>
+    <Description><![CDATA[$NotificationDeletePortlet:PortletDescription]]></Description>
+    <TypeName><![CDATA[SenseNet.Portal.Portlets.NotificationDeletePortlet, SenseNet.Notification]]></TypeName>
+    <ImageRef />
+    <ImageData attachment="NotificationDeletePortlet.ImageData" />
+    <DisplayName><![CDATA[$NotificationDeletePortlet:PortletDisplayName]]></DisplayName>
+  </Fields>
+  <Permissions>
+    <Clear />
+  </Permissions>
+</ContentMetaData>

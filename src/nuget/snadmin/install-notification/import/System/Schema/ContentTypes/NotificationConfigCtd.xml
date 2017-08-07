@@ -1,0 +1,47 @@
+﻿<ContentType name="NotificationConfig" parentType="GenericContent" handler="SenseNet.Notification.NotificationConfig" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
+  <DisplayName>$Ctd-NotificationConfig,DisplayName</DisplayName>
+  <Description>$Ctd-NotificationConfig,Description</Description>
+  <Icon>Content</Icon>
+  <Fields>
+    <Field name="Subject" type="ShortText">
+      <DisplayName>$Ctd-NotificationConfig,Subject-DisplayName</DisplayName>
+      <Description>$Ctd-NotificationConfig,Subject-Description</Description>
+    </Field>
+    <Field name="Body" type="LongText">
+      <DisplayName>$Ctd-NotificationConfig,Body-DisplayName</DisplayName>
+      <Description>$Ctd-NotificationConfig,Body-Description</Description>
+    </Field>
+    <Field name="SenderAddress" type="ShortText">
+      <DisplayName>$Ctd-NotificationConfig,SenderAddress-DisplayName</DisplayName>
+      <Description>$Ctd-NotificationConfig,SenderAddress-Description</Description>
+    </Field>
+    <Field name="DisplayName" type="ShortText">
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="Version" type="Version">
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="Index" type="Integer">
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+    <Field name="Description" type="LongText">
+      <Configuration>
+        <VisibleBrowse>Hide</VisibleBrowse>
+        <VisibleEdit>Hide</VisibleEdit>
+        <VisibleNew>Hide</VisibleNew>
+      </Configuration>
+    </Field>
+  </Fields>
+</ContentType>

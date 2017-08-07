@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources>
+  <ResourceClass name="Ctd-NotificationConfig">
+    <Languages>
+      <Language cultureName="en">
+        <data name="DisplayName" xml:space="preserve">
+          <value>Notification Configuration</value>
+        </data>
+        <data name="Description" xml:space="preserve">
+          <value>Configuration content for notifications to be placed under a (config) folder anywhere in the Content Repository.</value>
+        </data>
+        <data name="Subject-DisplayName" xml:space="preserve">
+          <value>Subject</value>
+        </data>
+        <data name="Subject-Description" xml:space="preserve">
+          <value>Subject of the email to be sent as notification. Provided "{FieldName}" entities will be replaced with referenced Field values of the content triggering notification.</value>
+        </data>
+        <data name="Body-DisplayName" xml:space="preserve">
+          <value>Body</value>
+        </data>
+        <data name="Body-Description" xml:space="preserve">
+          <value>Body of the email to be sent as notification. Provided "{FieldName}" entities will be replaced with referenced Field values of the content triggering notification.</value>
+        </data>
+      	<data name="SenderAddress-DisplayName" xml:space="preserve">
+          <value>Address of sender</value>
+        </data>
+        <data name="SenderAddress-Description" xml:space="preserve">
+          <value>Email address of the sender of the email to be sent as notification.</value>
+        </data>
+      </Language>
+      <Language cultureName="hu">
+        <data name="DisplayName" xml:space="preserve">
+          <value>Értesítés konfiguráció</value>
+        </data>
+        <data name="Description" xml:space="preserve">
+          <value>Konfigurációs tartalom értesítésekhez.</value>
+        </data>
+        <data name="Subject-DisplayName" xml:space="preserve">
+          <value>Tárgy</value>
+        </data>
+        <data name="Subject-Description" xml:space="preserve">
+          <value>Értesítő e-mail 'Tárgy' mezőjébe kerül. A "{Mezőnév}" formában megadott paramétereket lecseréljük az értesítést kiváltó tartalom adott mezőjének értékére.</value>
+        </data>
+        <data name="Body-DisplayName" xml:space="preserve">
+          <value>E-mail törzsszöveg</value>
+        </data>
+        <data name="Body-Description" xml:space="preserve">
+          <value>Az e-mail szövege. A "{Mezőnév}" formában megadott paramétereket lecseréljük az értesítést kiváltó tartalom adott mezőjének értékére.</value>
+        </data>
+	      <data name="SenderAddress-DisplayName" xml:space="preserve">
+          <value>A küldő címe</value>
+        </data>
+        <data name="SenderAddress-Description" xml:space="preserve">
+          <value>Értesítő e-mail küldőjének e-mail címe</value>
+        </data>
+      </Language>
+    </Languages>
+  </ResourceClass>
+</Resources>

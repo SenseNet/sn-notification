@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>SenseNet.Notification</id>
+    <version>7.0.0-beta0</version>
+    <title>sensenet ECM Notification component</title>
+    <authors>kavics,aniko,laci,borsi,lajos,tusmester</authors>
+    <owners>Sense/Net</owners>
+    <licenseUrl>https://github.com/SenseNet/sn-notification/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/SenseNet/sn-notification</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/SenseNet/sn-resources/master/images/sn-icon/sensenet-icon-64.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>sensenet ECM Notification makes it possible to automatically notify users by email when something happens in the Content Repository.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright © Sense/Net Inc.</copyright>
+    <tags>sensenet ecm ecms</tags>
+    <dependencies>
+      <dependency id="SenseNet.Services" version="7.0.0-beta41" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\SenseNet.Notification.*" target="lib\net451" />
+  </files>
+</package>

@@ -1,0 +1,53 @@
+<ContentType name="Subscription" parentType="GenericContent" handler="SenseNet.ContentRepository.GenericContent" xmlns="http://schemas.sensenet.com/SenseNet/ContentRepository/ContentTypeDefinition">
+  <DisplayName>$Ctd-Subscription,DisplayName</DisplayName>
+  <Description>$Ctd-Subscription,Description</Description>
+  <Icon>Content</Icon>
+  <Fields>
+    <Field name="ContentPath" type="ShortText">
+      <DisplayName>$Ctd-Subscription,ContentPath-DisplayName</DisplayName>
+    </Field>
+    <Field name="UserPath" type="ShortText">
+      <DisplayName>$Ctd-Subscription,UserPath-DisplayName</DisplayName>
+    </Field>
+    <Field name="UserEmail" type="ShortText">
+      <DisplayName>$Ctd-Subscription,UserEmail-DisplayName</DisplayName>
+      <Description>$Ctd-Subscription,UserEmail-Description</Description>
+    </Field>
+    <Field name="UserId" type="Number">
+      <DisplayName>$Ctd-Subscription,UserId-DisplayName</DisplayName>
+    </Field>
+    <Field name="UserName" type="ShortText">
+      <DisplayName>$Ctd-Subscription,UserName-DisplayName</DisplayName>
+    </Field>
+    <Field name="IsActive" type="Boolean">
+      <DisplayName>$Ctd-Subscription,IsActive-DisplayName</DisplayName>
+      <Description>$Ctd-Subscription,IsActive-Description</Description>
+      <Configuration>
+        <DefaultValue>true</DefaultValue>
+      </Configuration>
+    </Field>
+    <Field name="Frequency" type="Choice">
+      <DisplayName>$Ctd-Subscription,Frequency-DisplayName</DisplayName>
+      <Description>$Ctd-Subscription,Frequency-Description</Description>
+      <Configuration>
+        <ControlHint>sn:RadioButtonGroup</ControlHint>
+        <Options>
+          <Option selected="true" value="0">$Ctd-Subscription,Frequency-0</Option>
+          <Option value="1">$Ctd-Subscription,Frequency-1</Option>
+          <Option value="2">$Ctd-Subscription,Frequency-2</Option>
+          <Option value="3">$Ctd-Subscription,Frequency-3</Option>
+        </Options>
+      </Configuration>
+    </Field>
+    <Field name="Language" type="Choice">
+      <DisplayName>$Ctd-Subscription,Language-DisplayName</DisplayName>
+      <Description>$Ctd-Subscription,Language-Description</Description>
+      <Configuration>
+        <Options>
+          <Option selected="true" value="en">$Ctd-Subscription,Language-en</Option>
+          <Option value="hu">$Ctd-Subscription,Language-hu</Option>
+        </Options>
+      </Configuration>
+    </Field>
+  </Fields>
+</ContentType>

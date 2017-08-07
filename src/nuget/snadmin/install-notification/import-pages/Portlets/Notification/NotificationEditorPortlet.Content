@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>Portlet</ContentType>
+  <ContentName>NotificationEditorPortlet</ContentName>
+  <Fields>
+    <Description><![CDATA[$NotificationEditorPortlet:PortletDescription]]></Description>
+    <TypeName><![CDATA[SenseNet.Portal.Portlets.NotificationEditorPortlet, SenseNet.Notification]]></TypeName>
+    <ImageRef />
+    <ImageData attachment="NotificationEditorPortlet.ImageData" />
+    <DisplayName><![CDATA[$NotificationEditorPortlet:PortletDisplayName]]></DisplayName>
+  </Fields>
+  <Permissions>
+    <Clear />
+  </Permissions>
+</ContentMetaData>

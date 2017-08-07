@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources>  
+  <ResourceClass name="Ctd-Subscription">
+    <Languages>
+      <Language cultureName="en">
+        <data name="DisplayName" xml:space="preserve">
+          <value>Subscription</value>
+        </data>
+        <data name="Description" xml:space="preserve">
+          <value>It stores a subscription for a user.</value>
+        </data>
+        <data name="ContentPath-DisplayName" xml:space="preserve">
+          <value>ContentPath</value>
+        </data>
+        <data name="UserPath-DisplayName" xml:space="preserve">
+          <value>UserPath</value>
+        </data>
+        <data name="UserEmail-DisplayName" xml:space="preserve">
+          <value>Notification address</value>
+        </data>
+        <data name="UserEmail-Description" xml:space="preserve">
+          <value>Notification emails will be sent to this address.</value>
+        </data>
+        <data name="UserId-DisplayName" xml:space="preserve">
+          <value>UserId</value>
+        </data>
+        <data name="UserName-DisplayName" xml:space="preserve">
+          <value>UserName</value>
+        </data>
+        <data name="IsActive-DisplayName" xml:space="preserve">
+          <value>Active notification</value>
+        </data>
+        <data name="IsActive-Description" xml:space="preserve">
+          <value>Defines whether the portal sends notification emails or not.</value>
+        </data>
+        <data name="Frequency-DisplayName" xml:space="preserve">
+          <value>Frequency</value>
+        </data>
+        <data name="Frequency-Description" xml:space="preserve">
+          <value>
+            Defines the frequency of the notification<br />
+            <br /><i>Immediately:</i> immediate email when a content changes.
+            <br /><i>Daily:</i> one email per day with the summary of changes.
+            <br /><i>Weekly:</i> one email per week with the summary of changes.
+            <br /><i>Monthly:</i>  one email per month with the summary of changes.</value>
+        </data>
+        <data name="Frequency-0" xml:space="preserve">
+          <value>Immediately</value>
+        </data>
+        <data name="Frequency-1" xml:space="preserve">
+          <value>Daily</value>
+        </data>
+        <data name="Frequency-2" xml:space="preserve">
+          <value>Weekly</value>
+        </data>
+        <data name="Frequency-3" xml:space="preserve">
+          <value>Monthly</value>
+        </data>
+        <data name="Language-DisplayName" xml:space="preserve">
+          <value>Language</value>
+        </data>
+        <data name="Language-Description" xml:space="preserve">
+          <value>Defines the language of the notification.</value>
+        </data>
+        <data name="Language-en" xml:space="preserve">
+          <value>English</value>
+        </data>
+        <data name="Language-hu" xml:space="preserve">
+          <value>Hungarian</value>
+        </data>
+      </Language>
+      <Language cultureName="hu">
+        <data name="DisplayName" xml:space="preserve">
+          <value>Feliratkozás</value>
+        </data>
+        <data name="Description" xml:space="preserve">
+          <value>Egy felhasználó egy tartalomra való feliratkozását tárolja.</value>
+        </data>
+        <data name="ContentPath-DisplayName" xml:space="preserve">
+          <value>Tartalom</value>
+        </data>
+        <data name="UserPath-DisplayName" xml:space="preserve">
+          <value>Felhasználó</value>
+        </data>
+        <data name="UserEmail-DisplayName" xml:space="preserve">
+          <value>Értesítési cím</value>
+        </data>
+        <data name="UserEmail-Description" xml:space="preserve">
+          <value>Az az e-mail cím, amire az értesítéseket küldi a rendszer.</value>
+        </data>
+        <data name="UserId-DisplayName" xml:space="preserve">
+          <value>Felhasználó azonosító</value>
+        </data>
+        <data name="UserName-DisplayName" xml:space="preserve">
+          <value>Felhasználónév</value>
+        </data>
+        <data name="IsActive-DisplayName" xml:space="preserve">
+          <value>Értesítés aktiválása</value>
+        </data>
+        <data name="IsActive-Description" xml:space="preserve">
+          <value>Küld-e a portál értesítést, vagy sem.</value>
+        </data>
+        <data name="Frequency-DisplayName" xml:space="preserve">
+          <value>Gyakoriság</value>
+        </data>
+        <data name="Frequency-Description" xml:space="preserve">
+          <value>
+            Értesítések kiküldésének gyakorisága<br />
+            <br /><i>Azonnali:</i> a tartalom változásakor azonnal megy az értesítést.
+            <br /><i>Napi:</i> egy e-mail megy ki naponta, összesítve a változásokat.
+            <br /><i>Heti:</i> egy e-mail megy ki hetente, összesítve a változásokat.
+            <br /><i>Havi:</i> egy e-mailt megy ki havonta, összesítve a változásokat.</value>
+        </data>
+        <data name="Frequency-0" xml:space="preserve">
+          <value>Azonnali</value>
+        </data>
+        <data name="Frequency-1" xml:space="preserve">
+          <value>Napi</value>
+        </data>
+        <data name="Frequency-2" xml:space="preserve">
+          <value>Heti</value>
+        </data>
+        <data name="Frequency-3" xml:space="preserve">
+          <value>Havi</value>
+        </data>
+        <data name="Language-DisplayName" xml:space="preserve">
+          <value>Nyelv</value>
+        </data>
+        <data name="Language-Description" xml:space="preserve">
+          <value>Megadja az értesítés nyelvét.</value>
+        </data>
+        <data name="Language-en" xml:space="preserve">
+          <value>angol</value>
+        </data>
+        <data name="Language-hu" xml:space="preserve">
+          <value>magyar</value>
+        </data>
+      </Language>
+    </Languages>
+  </ResourceClass>
+</Resources>

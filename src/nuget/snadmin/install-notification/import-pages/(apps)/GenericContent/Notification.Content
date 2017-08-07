@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>Page</ContentType>
+  <ContentName>Notification</ContentName>
+  <Fields>
+    <PageTemplateNode>
+      <Path>/Root/Global/pagetemplates/sn-layout-dialog.html</Path>
+    </PageTemplateNode>
+    <Index>5000</Index>
+    <PersonalizationSettings attachment="Notification.PersonalizationSettings" />
+    <DisplayName><![CDATA[$Action,Notification]]></DisplayName>
+    <Scenario><![CDATA[ListItem;ListActions;WorkspaceActions]]></Scenario>
+    <ActionTypeName><![CDATA[SetNotificationAction]]></ActionTypeName>
+    <Icon><![CDATA[notification]]></Icon>
+  </Fields>
+  <Permissions>
+    <Clear />
+    <Identity path="/Root/IMS/BuiltIn/Portal/IdentifiedUsers">
+      <RunApplication>Allow</RunApplication>
+    </Identity>
+  </Permissions>
+</ContentMetaData>

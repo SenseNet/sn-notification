@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>Page</ContentType>
+  <ContentName>NotificationAdmin</ContentName>
+  <Fields>
+    <PageTemplateNode>
+      <Path>/Root/Global/pagetemplates/sn-layout-dialog.html</Path>
+    </PageTemplateNode>
+    <Index>9000</Index>
+    <PersonalizationSettings attachment="NotificationAdmin.PersonalizationSettings" />
+    <DisplayName><![CDATA[$Notification,NotificationAdmin]]></DisplayName>
+    <Scenario><![CDATA[ListItem]]></Scenario>
+    <Icon><![CDATA[notifications]]></Icon>
+    <VersioningMode>1</VersioningMode>
+    <InheritableVersioningMode>1</InheritableVersioningMode>
+    <ApprovingMode>1</ApprovingMode>
+    <InheritableApprovingMode>1</InheritableApprovingMode>
+  </Fields>
+  <Permissions>
+    <Clear />
+  </Permissions>
+</ContentMetaData>

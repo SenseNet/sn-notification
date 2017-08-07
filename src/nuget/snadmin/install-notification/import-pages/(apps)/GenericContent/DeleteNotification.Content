@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentMetaData>
+  <ContentType>Page</ContentType>
+  <ContentName>DeleteNotification</ContentName>
+  <Fields>
+    <PageTemplateNode>
+      <Path>/Root/Global/pagetemplates/sn-layout-dialog.html</Path>
+    </PageTemplateNode>
+    <PersonalizationSettings attachment="DeleteNotification.PersonalizationSettings" />
+    <DisplayName><![CDATA[$Action,DeleteNotification]]></DisplayName>
+    <Icon><![CDATA[application]]></Icon>
+  </Fields>
+  <Permissions>
+    <Clear />
+    <Identity path="/Root/IMS/BuiltIn/Portal/IdentifiedUsers">
+      <RunApplication>Allowed</RunApplication>
+    </Identity>
+  </Permissions>
+</ContentMetaData>
