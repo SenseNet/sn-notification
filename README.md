@@ -1,5 +1,5 @@
 # Notification for sensenet ECM
-Notification component for the [sensenet ECM](https://github.com/SenseNet/sensenet) platform.
+Notification component for the [sensenet ECM](https://github.com/SenseNet/sensenet) platform. Lets users subscribe to content changes and receive **emails** either almost immediately or in an aggregated way periodically about changes in he repository.
 
 [![Join the chat at https://gitter.im/SenseNet/sn-notification](https://badges.gitter.im/SenseNet/sn-notification.svg)](https://gitter.im/SenseNet/sn-notification?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![NuGet](https://img.shields.io/nuget/v/SenseNet.Notification.Install.svg)](https://www.nuget.org/packages/SenseNet.Notification.Install)
