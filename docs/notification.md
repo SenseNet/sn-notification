@@ -7,7 +7,7 @@ Subscribers can edit their own subscriptions, but do not have access to others'.
 
 > Notification is turned on by default. To turn off this feature you have to disable it in the application configuration file. For details, see the [Configuration](#Configuration) section below.
 
-> Users will be able to subscribe only if they have an email address in the system.
+> Users will be able to subscribe only if they have an **email address** in the system. If their email address changes, all their notifications will be sent to their new email address from than on.
 
 ## Subscribing to content changes
 Notifications can be set up for any Content in the system easily in any list or library or in Content Explorer. You have to click the dropdown action menu on a Content to get the list of avalaible actions and select the ''Set Notification'' action. You also have access to workspace notification settings in the top right corner of your workspace dashboard (Workspace actions menu).
