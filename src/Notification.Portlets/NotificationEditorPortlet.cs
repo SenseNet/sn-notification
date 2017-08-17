@@ -137,7 +137,7 @@ namespace SenseNet.Portal.Portlets
                                         UserId = this.User.Id,
                                         UserName = this.User.Name,
                                         Language = "en",
-                                        SitePath = currentSite.Path,
+                                        SitePath = currentSite?.Path,
                                         SiteUrl = siteUrl
                                     };
 
