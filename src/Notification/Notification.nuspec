@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SenseNet.Notification</id>
-    <version>7.0.0-beta01</version>
+    <version>7.0.0-beta1</version>
     <title>sensenet ECM Notification component</title>
     <authors>kavics,aniko,laci,borsi,lajos,tusmester</authors>
     <owners>Sense/Net</owners>

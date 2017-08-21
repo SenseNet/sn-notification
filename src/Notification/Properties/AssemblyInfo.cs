@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyVersion("7.0.0.0")]
 [assembly: AssemblyFileVersion("7.0.0.0")]
-[assembly: AssemblyInformationalVersion("7.0.0-beta01")]
+[assembly: AssemblyInformationalVersion("7.0.0-beta1")]
 
 [assembly: ComVisible(false)]
 [assembly: Guid("fcc6395c-7fd0-400e-a01c-274e2a54bdcb")]

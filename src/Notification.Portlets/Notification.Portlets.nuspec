@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SenseNet.Notification.Portlets</id>
-    <version>7.0.0-beta01</version>
+    <version>7.0.0-beta1</version>
     <title>sensenet ECM Notification Portlets</title>
     <authors>kavics,aniko,laci,borsi,lajos,tusmester</authors>
     <owners>Sense/Net</owners>
@@ -15,7 +15,7 @@
     <copyright>Copyright © Sense/Net Inc.</copyright>
     <tags>sensenet ecm ecms notification</tags>
     <dependencies>
-      <dependency id="SenseNet.Notification" version="7.0.0-beta01" />
+      <dependency id="SenseNet.Notification" version="7.0.0-beta1" />
     </dependencies>
   </metadata>
   <files>
