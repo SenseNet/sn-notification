@@ -12,7 +12,7 @@ If you also have the [sensenet ECM WebPages](https://github.com/SenseNet/sn-webp
 
 > To find out which packages you need to install, take a look at the available [sensenet ECM components](http://community.sensenet.com/docs/sensenet-components).
 
-> To learn more about notifications in sensenet ECM, visit the [main Notification article](/docs/notification).
+> To learn more about notifications in sensenet ECM, visit the [main Notification article](/docs/notification.md).
 
 ## Installation
 To get started, install the Notification component from NuGet:
