@@ -13,15 +13,14 @@ namespace SenseNet.Notification
     internal class NotificationSender
     {
         private static bool _mailSendingInProgress;
-        private static SmtpClient _smtpClient;
         private static readonly bool _isSmtpConfigured;
         
         internal static bool TestMode { get; set; }
 
         static NotificationSender()
         {
-            _smtpClient = new SmtpClient();
-            _isSmtpConfigured = !String.IsNullOrEmpty(_smtpClient.Host);
+            using (var smtpClient = new SmtpClient())
+                _isSmtpConfigured = !String.IsNullOrEmpty(smtpClient.Host);
             _mailSendingInProgress = false;
             TestMode = false;
         }
@@ -197,7 +196,8 @@ namespace SenseNet.Notification
                 Debug.WriteLine("#Notification> Message sent, subject: " + message.Subject);
             else
             {
-                _smtpClient.Send(message.GenerateMailMessage());
+                using (var smtpClient = new SmtpClient())
+                    smtpClient.Send(message.GenerateMailMessage());
 
                 Debug.WriteLine("#Notification> Message sent, subject: " + message.Subject);
             }
