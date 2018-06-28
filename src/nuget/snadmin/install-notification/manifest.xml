@@ -1,10 +1,10 @@
 <Package type='Install'>
   <Id>SenseNet.Notification</Id>
-  <Description>sensenet ECM Notification</Description>
-  <ReleaseDate>2018-02-12</ReleaseDate>
-  <Version>7.1.0</Version>
+  <Description>sensenet Notification</Description>
+  <ReleaseDate>2018-06-28</ReleaseDate>
+  <Version>7.2.0</Version>
   <Dependencies>
-    <Dependency id='SenseNet.Services' minVersion='7.1.0' />
+    <Dependency id='SenseNet.Services' minVersion='7.2.0' />
   </Dependencies>
   <Parameters>
     <Parameter name="@userName" description="Username to access the server while installing."></Parameter>

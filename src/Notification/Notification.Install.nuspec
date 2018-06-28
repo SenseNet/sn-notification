@@ -2,21 +2,21 @@
 <package >
   <metadata>
     <id>SenseNet.Notification.Install</id>
-    <version>7.1.0</version>
-    <title>sensenet ECM Notification installer</title>
-    <authors>kavics,aniko,laci,lajos,tusmester</authors>
+    <version>7.2.0</version>
+    <title>sensenet Notification installer</title>
+    <authors>kavics,aniko,lajos,tusmester</authors>
     <owners>Sense/Net</owners>
     <licenseUrl>https://github.com/SenseNet/sn-notification/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/SenseNet/sn-notification</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/SenseNet/sn-resources/master/images/sn-icon/sensenet-icon-64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>sensenet ECM Notification installer contains the install content for the library-only package SenseNet.Notification. This package should be installed only in a single web project. All other projects should reference the SenseNet.Notification dll-only package.</description>
+    <description>sensenet Notification installer contains the install content for the library-only package SenseNet.Notification. This package should be installed only in a single web project. All other projects should reference the SenseNet.Notification dll-only package.</description>
     <releaseNotes>See release notes on GitHub.</releaseNotes>
     <copyright>Copyright © Sense/Net Inc.</copyright>
     <tags>sensenet ecm ecms</tags>
     <dependencies>
-      <dependency id="SenseNet.Services.Install" version="7.1.0" />
-      <dependency id="SenseNet.Notification" version="7.1.0" />
+      <dependency id="SenseNet.Services.Install" version="7.2.0" />
+      <dependency id="SenseNet.Notification" version="7.2.0" />
       <dependency id="SenseNet.SnAdmin" version="1.4.4" />
     </dependencies>
   </metadata>

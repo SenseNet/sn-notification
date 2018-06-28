@@ -183,6 +183,7 @@
     <Compile Include="LastProcessTime.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="MessageTemplate.cs" />
+    <Compile Include="NotificationComponent.cs" />
     <Compile Include="NotificationSender.cs" />
     <Compile Include="NotificationConfig.cs" />
     <Compile Include="NotificationHandler.cs" />
