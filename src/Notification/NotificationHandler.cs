@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Globalization;
 using SenseNet.Diagnostics;
 using SenseNet.ContentRepository.Storage.AppModel;
+using SenseNet.ContentRepository.Storage.Data;
 
 namespace SenseNet.Notification
 {
@@ -214,44 +215,14 @@ UPDATE [dbo].[Notification.Synchronization]
         }
         private static bool UpdateLock(Synchronization oldLock, double timeframe)
         {
-            using (var proc = SenseNet.ContentRepository.Storage.Data.DataProvider.CreateDataProcedure(insertSql))
+            using (var proc = DataProvider.Instance.CreateDataProcedure(insertSql)
+                .AddParameter("@lockName", NOTIFICATIONLOCKNAME)
+                .AddParameter("@lockedUntil", DateTime.UtcNow.AddMinutes(timeframe))
+                .AddParameter("@computerName", Environment.MachineName)
+                .AddParameter("@lockId", Guid.NewGuid().ToString())
+                .AddParameter("@oldLockedUntil", oldLock.LockedUntil, System.Data.DbType.DateTime2))
             {
                 proc.CommandType = System.Data.CommandType.Text;
-
-                // lockname - nem biztos, hogy kell
-                var lockNamePrm = SenseNet.ContentRepository.Storage.Data.DataProvider.CreateParameter();
-                lockNamePrm.ParameterName = "@lockName";
-                lockNamePrm.DbType = System.Data.DbType.String;
-                lockNamePrm.Value = NOTIFICATIONLOCKNAME;
-                proc.Parameters.Add(lockNamePrm);
-
-                // lockedUntil
-                var lockedUntilPrm = SenseNet.ContentRepository.Storage.Data.DataProvider.CreateParameter();
-                lockedUntilPrm.ParameterName = "@lockedUntil";
-                lockedUntilPrm.DbType = System.Data.DbType.DateTime;
-                lockedUntilPrm.Value = DateTime.UtcNow.AddMinutes(timeframe);
-                proc.Parameters.Add(lockedUntilPrm);
-
-                // computername
-                var computerNamePrm = SenseNet.ContentRepository.Storage.Data.DataProvider.CreateParameter();
-                computerNamePrm.ParameterName = "@computerName";
-                computerNamePrm.DbType = System.Data.DbType.String;
-                computerNamePrm.Value = Environment.MachineName;
-                proc.Parameters.Add(computerNamePrm);
-
-                // lockId
-                var lockIdPrm = SenseNet.ContentRepository.Storage.Data.DataProvider.CreateParameter();
-                lockIdPrm.ParameterName = "@lockId";
-                lockIdPrm.DbType = System.Data.DbType.String;
-                lockIdPrm.Value = Guid.NewGuid().ToString();
-                proc.Parameters.Add(lockIdPrm);
-
-                // oldLockedUntil
-                var oldLockedUntilPrm = SenseNet.ContentRepository.Storage.Data.DataProvider.CreateParameter();
-                oldLockedUntilPrm.ParameterName = "@oldLockedUntil";
-                oldLockedUntilPrm.DbType = System.Data.DbType.DateTime2;
-                oldLockedUntilPrm.Value = oldLock.LockedUntil;
-                proc.Parameters.Add(oldLockedUntilPrm);
 
                 try
                 {

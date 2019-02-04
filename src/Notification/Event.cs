@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using SenseNet.ContentRepository.Storage;
@@ -86,17 +87,13 @@ SELECT COUNT(*) FROM @PathCollection C
             }
             xml.Append("</r>");
 
-            using (var proc = DataProvider.CreateDataProcedure(sql))
+            using (var proc = DataProvider.Instance.CreateDataProcedure(sql)
+                .AddParameter("@ProbeCollection", xml.ToString(), DbType.Xml))
             {
-                proc.CommandType = System.Data.CommandType.Text;
-                var prm = DataProvider.CreateParameter();
-                prm.ParameterName = "@ProbeCollection";
-                prm.DbType = System.Data.DbType.Xml;
-                prm.Value = xml.ToString();
-                proc.Parameters.Add(prm);
+                proc.CommandType = CommandType.Text;
 
                 var result = proc.ExecuteScalar();
-                var count = (int) result;
+                var count = (int)result;
                 return count > 0;
             }
         }

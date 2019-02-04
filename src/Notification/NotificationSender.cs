@@ -97,34 +97,13 @@ namespace SenseNet.Notification
             var until = DateTime.UtcNow.AddMinutes(1);
             var sql = "UPDATE TOP (@Top) [Notification.Messages] SET LockId = @LockId, LockedUntil = @LockedUntil WHERE LockId = @LockId OR LockId IS NULL OR LockedUntil < @Now";
             int rows = 0;
-            using (var proc = SenseNet.ContentRepository.Storage.Data.DataProvider.CreateDataProcedure(sql))
+            using (var proc = DataProvider.Instance.CreateDataProcedure(sql)
+                .AddParameter("@Top", Configuration.TakeCount)
+                .AddParameter("@LockId", lockId)
+                .AddParameter("@LockedUntil", until)
+                .AddParameter("@Now", DateTime.UtcNow))
             {
-                proc.CommandType = System.Data.CommandType.Text;
-
-                var topPrm = DataProvider.CreateParameter();
-                topPrm.ParameterName = "@Top";
-                topPrm.DbType = DbType.Int32;
-                topPrm.Value = Configuration.TakeCount;
-                proc.Parameters.Add(topPrm);
-
-                var lockIdPrm = DataProvider.CreateParameter();
-                lockIdPrm.ParameterName = "@LockId";
-                lockIdPrm.DbType = DbType.String;
-                lockIdPrm.Size = 500;
-                lockIdPrm.Value = lockId;
-                proc.Parameters.Add(lockIdPrm);
-
-                var lockedUntilPrm = DataProvider.CreateParameter();
-                lockedUntilPrm.ParameterName = "@LockedUntil";
-                lockedUntilPrm.DbType = DbType.DateTime;
-                lockedUntilPrm.Value = until;
-                proc.Parameters.Add(lockedUntilPrm);
-
-                var nowPrm = DataProvider.CreateParameter();
-                nowPrm.ParameterName = "@Now";
-                nowPrm.DbType = DbType.DateTime;
-                nowPrm.Value = DateTime.UtcNow;
-                proc.Parameters.Add(nowPrm);
+                proc.CommandType = CommandType.Text;
 
                 rows = proc.ExecuteNonQuery();
             }
