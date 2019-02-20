@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>SenseNet.Notification</id>
-    <version>7.2.0.1</version>
+    <version>7.2.1</version>
     <title>sensenet Notification component</title>
     <authors>kavics,aniko,lajos,tusmester</authors>
     <owners>Sense/Net</owners>
@@ -13,9 +13,9 @@
     <description>sensenet Notification makes it possible to automatically notify users by email when something happens in the Content Repository.</description>
     <releaseNotes>See release notes on GitHub.</releaseNotes>
     <copyright>Copyright © Sense/Net Inc.</copyright>
-    <tags>sensenet ecm ecms</tags>
+    <tags>sensenet ecm ecms notification</tags>
     <dependencies>
-      <dependency id="SenseNet.Services" version="7.5.1.3" />
+      <dependency id="SenseNet.Services" version="7.6" />
     </dependencies>
   </metadata>
   <files>

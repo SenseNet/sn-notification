@@ -10,17 +10,17 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SenseNet.Notification (Release)")]
 #endif
 
-[assembly: AssemblyDescription("Notification component for the sensenet ECM platform.")]
+[assembly: AssemblyDescription("Notification component for the sensenet platform.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Sense/Net Inc.")]
 [assembly: AssemblyCopyright("Copyright © Sense/Net Inc.")]
-[assembly: AssemblyProduct("sensenet ECM")]
+[assembly: AssemblyProduct("sensenet Notification")]
 [assembly: AssemblyTrademark("Sense/Net Inc.")]
 [assembly: AssemblyCulture("")]
 
-[assembly: AssemblyVersion("7.2.0.1")]
-[assembly: AssemblyFileVersion("7.2.0.1")]
-[assembly: AssemblyInformationalVersion("7.2.0.1")]
+[assembly: AssemblyVersion("7.2.1")]
+[assembly: AssemblyFileVersion("7.2.1")]
+[assembly: AssemblyInformationalVersion("7.2.1")]
 
 [assembly: ComVisible(false)]
 [assembly: Guid("fcc6395c-7fd0-400e-a01c-274e2a54bdcb")]
