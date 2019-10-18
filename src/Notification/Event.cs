@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using SenseNet.ContentRepository.Storage;
 using SenseNet.ContentRepository.Storage.Data;
 
@@ -87,13 +88,16 @@ SELECT COUNT(*) FROM @PathCollection C
             }
             xml.Append("</r>");
 
-            using (var proc = DataProvider.Instance.CreateDataProcedure(sql)
-                .AddParameter("@ProbeCollection", xml.ToString(), DbType.Xml))
+            var db = (RelationalDataProviderBase)DataStore.DataProvider;
+            using (var ctx = db.CreateDataContext(CancellationToken.None))
             {
-                proc.CommandType = CommandType.Text;
+                var count = (int) ctx.ExecuteScalarAsync(sql,
+                        cmd =>
+                        {
+                            cmd.Parameters.Add(ctx.CreateParameter("@ProbeCollection", DbType.Xml, xml.ToString()));
+                        })
+                    .ConfigureAwait(false).GetAwaiter().GetResult();
 
-                var result = proc.ExecuteScalar();
-                var count = (int)result;
                 return count > 0;
             }
         }

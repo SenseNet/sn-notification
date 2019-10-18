@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using SenseNet.ContentRepository.Storage.Data;
 
 namespace SenseNet.Notification
 {
@@ -186,7 +187,7 @@ namespace SenseNet.Notification
         private static void SetValue(LastProcessTime instance, NotificationFrequency freq, DateTime value)
         {
             DateTime? dbValue = null;
-            if (value >= ContentRepository.Storage.Data.DataProvider.Current.DateTimeMinValue)
+            if (value >= DataStore.DateTimeMinValue)
                 dbValue = value;
 
             switch (freq)

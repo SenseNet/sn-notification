@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using SenseNet.ContentRepository.Storage;
 using SenseNet.ContentRepository.Storage.Security;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
+using System.Threading;
 using SenseNet.Diagnostics;
 using SenseNet.ContentRepository.Storage.AppModel;
 using SenseNet.ContentRepository.Storage.Data;
@@ -213,27 +216,38 @@ UPDATE [dbo].[Notification.Synchronization]
                 return success;
             }
         }
+        [SuppressMessage("ReSharper", "AccessToDisposedClosure")]
         private static bool UpdateLock(Synchronization oldLock, double timeframe)
         {
-            using (var proc = DataProvider.Instance.CreateDataProcedure(insertSql)
-                .AddParameter("@lockName", NOTIFICATIONLOCKNAME)
-                .AddParameter("@lockedUntil", DateTime.UtcNow.AddMinutes(timeframe))
-                .AddParameter("@computerName", Environment.MachineName)
-                .AddParameter("@lockId", Guid.NewGuid().ToString())
-                .AddParameter("@oldLockedUntil", oldLock.LockedUntil, System.Data.DbType.DateTime2))
-            {
-                proc.CommandType = System.Data.CommandType.Text;
+            var db = (RelationalDataProviderBase) DataStore.DataProvider;
 
-                try
+            try
+            {
+                using (var ctx = db.CreateDataContext(CancellationToken.None))
                 {
-                    var rows = proc.ExecuteNonQuery();
+                    var rows = ctx.ExecuteNonQueryAsync(insertSql,
+                            cmd =>
+                            {
+                                cmd.Parameters.Add(
+                                    ctx.CreateParameter("@lockName", DbType.String, NOTIFICATIONLOCKNAME));
+                                cmd.Parameters.Add(ctx.CreateParameter("@lockedUntil", DbType.DateTime2,
+                                    DateTime.UtcNow.AddMinutes(timeframe)));
+                                cmd.Parameters.Add(ctx.CreateParameter("@computerName", DbType.String,
+                                    Environment.MachineName));
+                                cmd.Parameters.Add(ctx.CreateParameter("@lockId", DbType.String,
+                                    Guid.NewGuid().ToString()));
+                                cmd.Parameters.Add(ctx.CreateParameter("@oldLockedUntil", DbType.DateTime2,
+                                    oldLock.LockedUntil));
+                            })
+                        .ConfigureAwait(false).GetAwaiter().GetResult();
+
                     return rows == 1;
                 }
-                catch (Exception ex)
-                {
-                    SnLog.WriteException(ex);
-                    return false;
-                }
+            }
+            catch (Exception ex)
+            {
+                SnLog.WriteException(ex);
+                return false;
             }
         }
 

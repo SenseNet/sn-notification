@@ -96,18 +96,23 @@ namespace SenseNet.Notification
         {
             var until = DateTime.UtcNow.AddMinutes(1);
             var sql = "UPDATE TOP (@Top) [Notification.Messages] SET LockId = @LockId, LockedUntil = @LockedUntil WHERE LockId = @LockId OR LockId IS NULL OR LockedUntil < @Now";
-            int rows = 0;
-            using (var proc = DataProvider.Instance.CreateDataProcedure(sql)
-                .AddParameter("@Top", Configuration.TakeCount)
-                .AddParameter("@LockId", lockId)
-                .AddParameter("@LockedUntil", until)
-                .AddParameter("@Now", DateTime.UtcNow))
-            {
-                proc.CommandType = CommandType.Text;
 
-                rows = proc.ExecuteNonQuery();
+            var db = (RelationalDataProviderBase)DataStore.DataProvider;
+            using (var ctx = db.CreateDataContext(CancellationToken.None))
+            {
+                var rows = ctx.ExecuteNonQueryAsync(sql,
+                        cmd =>
+                        {
+                            cmd.Parameters.Add(ctx.CreateParameter("@Top", DbType.Int32, Configuration.TakeCount));
+                            cmd.Parameters.Add(ctx.CreateParameter("@LockId", DbType.String, lockId));
+                            cmd.Parameters.Add(ctx.CreateParameter("@lockedUntil", DbType.DateTime2, until));
+                            cmd.Parameters.Add(ctx.CreateParameter("@Now", DbType.DateTime2, DateTime.UtcNow));
+
+                        })
+                    .ConfigureAwait(false).GetAwaiter().GetResult();
+
+                return rows > 0;
             }
-            return rows > 0;
         }
         internal static IEnumerable<Message> SelectSignedMessages(DataHandler context, string lockId)
         {
