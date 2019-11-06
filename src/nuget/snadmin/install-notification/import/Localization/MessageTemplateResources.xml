@@ -30,16 +30,16 @@
 				</data>
         <!-- -->
         <data name="ImmediatelyFooter" xml:space="preserve">
-          <value><br/>Regards:<br/>sensenet ECM</value>
+          <value><br/>Regards:<br/>sensenet</value>
 				</data>
         <data name="DailyFooter" xml:space="preserve">
-          <value><br/>Regards:<br/>sensenet ECM</value>
+          <value><br/>Regards:<br/>sensenet</value>
 				</data>
         <data name="WeeklyFooter" xml:space="preserve">
-          <value><br/>Regards:<br/>sensenet ECM</value>
+          <value><br/>Regards:<br/>sensenet</value>
 				</data>
         <data name="MonthlyFooter" xml:space="preserve">
-          <value><br/>Regards:<br/>sensenet ECM</value>
+          <value><br/>Regards:<br/>sensenet</value>
 				</data>
         <!-- -->
         <data name="DocumentCreated" xml:space="preserve">
@@ -101,16 +101,16 @@
 				</data>
         <!-- -->
         <data name="ImmediatelyFooter" xml:space="preserve">
-          <value><br/>Üdvözlettel:<br/>sensenet ECM</value>
+          <value><br/>Üdvözlettel:<br/>sensenet</value>
 				</data>
         <data name="DailyFooter" xml:space="preserve">
-          <value><br/>Üdvözlettel:<br/>sensenet ECM</value>
+          <value><br/>Üdvözlettel:<br/>sensenet</value>
 				</data>
         <data name="WeeklyFooter" xml:space="preserve">
-          <value><br/>Üdvözlettel:<br/>sensenet ECM</value>
+          <value><br/>Üdvözlettel:<br/>sensenet</value>
 				</data>
         <data name="MonthlyFooter" xml:space="preserve">
-          <value><br/>Üdvözlettel:<br/>sensenet ECM</value>
+          <value><br/>Üdvözlettel:<br/>sensenet</value>
 				</data>
         <!-- -->
         <data name="DocumentCreated" xml:space="preserve">

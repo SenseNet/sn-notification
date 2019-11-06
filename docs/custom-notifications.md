@@ -1,5 +1,5 @@
 # Custom notifications
-sensenet ECM provides an easy-to-use [Notification](/docs/notification) feature to allow users to subscribe to different events and receive mail messages about changes in the [Content Repository](/docs/content-repository). 
+sensenet provides an easy-to-use [Notification](/docs/notification) feature to allow users to subscribe to different events and receive mail messages about changes in the [Content Repository](/docs/content-repository). 
 
 The process of mail generation can be fine tuned using *NotificationConfig* files.
 
