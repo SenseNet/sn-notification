@@ -1,7 +1,6 @@
 # Notification for sensenet
 Notification component for the [sensenet](https://github.com/SenseNet/sensenet) platform. Lets users subscribe to content changes and receive **emails** either almost immediately or in an aggregated way periodically about changes in the repository.
 
-[![Join the chat at https://gitter.im/SenseNet/sn-notification](https://badges.gitter.im/SenseNet/sn-notification.svg)](https://gitter.im/SenseNet/sn-notification?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![NuGet](https://img.shields.io/nuget/v/SenseNet.Notification.Install.svg)](https://www.nuget.org/packages/SenseNet.Notification.Install)
 
 You may install this component even if you only have the **sensenet Services** main component installed. That way you'll get the backend notification framework with a .Net API. 
@@ -14,6 +13,8 @@ If you also have the [sensenet WebPages](https://github.com/SenseNet/sn-webpages
 
 > To learn more about notifications in sensenet, visit the [main Notification article](/docs/notification.md).
 
-## Installation
-To get started, install the Notification component from NuGet:
-- [Install sensenet Notification from NuGet](/docs/install-notification-from-nuget)
+# sensenet as a service (SNaaS) - use sensenet from the cloud
+
+For a monthly subscription fee, we store all your content and data, relieving you of all maintenance-related tasks and installation, ensuring easy onboarding, easy updates, and patches.
+
+https://www.sensenet.com/pricing
